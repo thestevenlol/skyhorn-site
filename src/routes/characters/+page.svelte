@@ -1,8 +1,8 @@
 <script>
 	import CharacterCard from '$lib/components/CharacterCard.svelte';
 	import { demoCharacter } from '$lib/characters';
+	import Navbar from '$lib/components/Navbar.svelte';
+	import { navItems } from '$lib/navbar';
 </script>
 
-<div class="grid grid-cols-1 gap-6 p-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-	<CharacterCard character={demoCharacter} />
-</div>
+<Navbar items={navItems} />

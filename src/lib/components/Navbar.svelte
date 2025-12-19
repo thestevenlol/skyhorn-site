@@ -1,18 +1,14 @@
 <script lang="ts">
+	import '@fortawesome/fontawesome-free/css/all.css';
 	import type { NavItem } from '$lib/navbar';
+
+	import NavbarSection from '$lib/components/NavbarSection.svelte';
+
 	let { items }: { items: NavItem[] } = $props();
 </script>
 
-<div class="flex h-20 w-full flex-row items-center justify-between bg-black px-20">
-	<!-- 
-    home icon on left 
-    hrefs on right
-    middle? idk
-    -->
-	<div class="home">homeicon</div>
-	<ul class="mr-20 flex flex-row gap-16">
-		{#each items as item}
-			<li><a href={item.href}>{item.name}</a></li>
-		{/each}
-	</ul>
+<div class="flex h-20 w-full justify-between border-b-2 border-b-[#232f44] bg-[#0b0d14] px-4">
+	<NavbarSection text="left" />
+	<NavbarSection text="middle" />
+	<NavbarSection text="right" />
 </div>
