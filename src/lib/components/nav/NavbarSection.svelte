@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { NavItem } from '$lib/components/nav/navbar'; // interface import
-	import NavItemComponent from '$lib/components/nav/NavItemComponent.svelte';
+	import type { NavItem } from './navItem';
+	import NavItemComponent from './NavItemComponent.svelte';
 
 	let { items }: { items: NavItem[] } = $props();
 </script>

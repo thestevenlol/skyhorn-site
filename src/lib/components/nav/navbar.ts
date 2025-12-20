@@ -1,9 +1,7 @@
-export interface NavItem {
-    text: string;
-    href?: string;
-    fa_icon?: string;
-}
+import type { NavItem } from './navItem';
 
-export const navItems = [
-    { text: 'Characters', href: '/characters', fa_icon: 'fa-solid fa-user' },
-]
+export const navItems: NavItem[][] = [
+	[{ text: 'The Secrets of Skyhorn Lighthouse', href: '/', fa_icon: '' }],
+	[{ text: 'Characters', href: '/characters', fa_icon: '' }],
+	[{ text: '', href: '/login', fa_icon: 'fa-solid fa-user' }]
+];
