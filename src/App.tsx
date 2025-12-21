@@ -1,22 +1,16 @@
-import { APITester } from "./APITester";
-import "./index.css";
+import { ThemeButton } from '@/components/ThemeButton';
+import { useState } from 'react';
 
-import logo from "./logo.svg";
-import reactLogo from "./react.svg";
+function App() {
+  const [theme, setTheme] = useState('light');
 
-export function App() {
+  const handleThemeClick = () => {
+    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+  };
+
   return (
-    <div className="app">
-      <div className="logo-container">
-        <img src={logo} alt="Bun Logo" className="logo bun-logo" />
-        <img src={reactLogo} alt="React Logo" className="logo react-logo" />
-      </div>
-
-      <h1>Bun + React</h1>
-      <p>
-        Edit <code>src/App.tsx</code> and save to test HMR
-      </p>
-      <APITester />
+    <div className='overflow-hidden h-svh w-full relative'>
+      <ThemeButton theme={theme} onThemeChange={handleThemeClick} />
     </div>
   );
 }
